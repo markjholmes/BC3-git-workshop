@@ -21,11 +21,13 @@ On GitHub repository go to `Code` -> `Copy to clipboard`
 Link the repository to `RStudio` / `Visual Studio Code` / Others
 
 On RStudio:
-  `File`: `New Project`: `Version Control`: `Git`
+  - `File`: `New Project`: `Version Control`: `Git`
   
-  Paste `ÙRL` and insert `Project directory name`
+  - Paste `ÙRL` and insert `Project directory name`
 
-  `Create Project`
+  - `Create Project`
+
+## [4) Creating a new R project ]()
 
 
 
