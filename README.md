@@ -6,22 +6,22 @@ Introduction to GitHub for collaborative projects
 ### Install Git on Linux: Debian / Ubuntu (apt-get)
 <details><summary>Example</summary>
 <p>
-From your shell, install Git using apt-get:
+From your terminal, install Git using apt-get:
   
-```
+```shell
 sudo apt-get update
 sudo apt-get install git
 ```
 
 Verify the installation was successful by typing:
 
-```
+```shell
 git --version
 ```
 
 Configure your Git username and email using the following commands, replacing Mark's name with your own. These details will be associated with any commits that you create:
 
-```
+```shell
 git config --global user.name "Mark Zuckerberg"
 git config --global user.email "mark.zuckerberg@facebook.com"
 ```
@@ -31,30 +31,63 @@ git config --global user.email "mark.zuckerberg@facebook.com"
 ### Install Git on Mac OS X
 <details><summary>Example</summary>
 <p>
-# Installer
+  
+#### Install from Homebrew
 
-#### With Homebrew
+  Open your terminal and install Git using Homebrew:
+  ```shell
+  brew install git
+  ```
+  Verify the installation was successful by typing:
+  ```shell
+  git --version
+  ```
+  Configure your Git username and email using the following commands, replacing Mark's name with your own. These details will be associated with any commits that you create:
+  ```shell
+  git config --global user.name "Mark Zuckerberg"
+  git config --global user.email "mark.zuckerberg@facebook.com"
+  ```
 
-Open your terminal and install Git using Homebrew:
-```
-brew install git
-```
-Verify the installation was successful by typing:
-```
-git --version
-```
-Configure your Git username and email using the following commands, replacing Mark's name with your own. These details will be associated with any commits that you create:
-```
-git config --global user.name "Mark Zuckerberg"
-git config --global user.email "mark.zuckerberg@facebook.com"
-```
+  Check if you already have MacPorts installed:
+  ```shell
+  which port
+  ```
+  It should returns: `/opt/local/bin/port`
+  
+  If not, install it:
+  ```shell
+  sudo port install git
+  ```
+
+#### Install from an Installer
+(I do not recommend it)
+
+  1. Navigate to the latest [macOS Git Installer](https://sourceforge.net/projects/git-osx-installer/) and download the latest version.
+  
+  2. Once the installer has started, follow the instructions as provided until the installation is complete.
+     
+  3. Verify the installation was successful by typing:
+  ```shell
+  git --version
+  ```
+
 <p>
 </details>
 
 ### Install Git on Windows
 <details><summary>Example</summary>
 <p>
-# Installer
+  
+  1. Navigate to the latest Git for [Windows installer](https://gitforwindows.org/) and download the latest version.
+  
+  2. Once the installer has started, follow the instructions as provided in the Git Setup wizard screen until the installation is complete.
+   
+  3. Open the windows command prompt (or Git Bash if you selected not to use the standard Git Windows Command Prompt during the Git installation).
+   
+  4. Verify the installation was successful by typing:
+```shell
+git version
+```
 
 <p>
 </details>
@@ -62,15 +95,16 @@ git config --global user.email "mark.zuckerberg@facebook.com"
 ## [2) Creating an account on GitHub](https://docs.github.com/en/get-started/quickstart/creating-an-account-on-github)
 
 ## [3) Creating a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
-a) Short and concise name
 
-b) Avoid special characters and white spaces
+  a) Short and concise name
 
-c) Select between `public` or `private`
+  b) Avoid special characters and white spaces
 
-d) Add `.gitignore`and select `R`
+  c) Select between `public` or `private`
 
-e) Edit `README`
+  d) Add `.gitignore`and select `R`
+
+  e) Edit `README`
 
 ## [4) Clonning a repository]()
 
@@ -81,7 +115,7 @@ Link the repository to `RStudio` / `Visual Studio Code` / Others
 On RStudio:
   - `File`: `New Project`: `Version Control`: `Git`
   
-  - Paste `ÙRL` and insert `Project directory name`
+  - Paste `URL` and insert `Project directory name`
 
   - `Create Project`
 
@@ -89,6 +123,6 @@ On RStudio:
 
 
 
-```
+```shell
 interactive -n 2 -p vfast -r mer03
 ````
