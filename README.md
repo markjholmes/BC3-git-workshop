@@ -85,9 +85,15 @@ git config --global user.email "mark.zuckerberg@facebook.com"
   3. Open the windows command prompt (or Git Bash if you selected not to use the standard Git Windows Command Prompt during the Git installation).
    
   4. Verify the installation was successful by typing:
-```shell
-git version
-```
+  ```shell
+  git version
+  ```
+
+  5. Configure your Git username and email using the following commands, replacing Mark's name with your own. These details will be associated with any commits that you create:
+  ```shell
+  git config --global user.name "Mark Zuckerberg"
+  git config --global user.email "mark.zuckerberg@facebook.com"
+  ```
 
 <p>
 </details>
