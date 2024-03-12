@@ -83,8 +83,19 @@ git config --global user.email "mark.zuckerberg@facebook.com"
   2. Once the installer has started, follow the instructions as provided in the Git Setup wizard screen until the installation is complete.
    
   3. Open the windows command prompt (or Git Bash if you selected not to use the standard Git Windows Command Prompt during the Git installation).
+
+    These are my recoomendations, but please, feel free to explore and consider all options:
+      - Use bundled OpenSSH
+      - Use the OpenSSL library
+      - Checkout Windows-style, commit Unix-style line endings
+      - Use MinTTY (the default terminal of MSYS2)
+      - Fast-forward or merge
+      - Git Credential Manager
+      - Enable file system caching
+      - Override the default branch name for new repositories
+      - Git from the command line and also from 3rd-party software
    
-  4. Verify the installation was successful by typing:
+  5. Verify the installation was successful by typing:
   ```shell
   git version
   ```
