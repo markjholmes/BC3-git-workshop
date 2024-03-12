@@ -129,6 +129,3 @@ On RStudio:
 
 
 
-```shell
-interactive -n 2 -p vfast -r mer03
-````
