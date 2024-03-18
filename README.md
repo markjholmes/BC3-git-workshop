@@ -3,7 +3,7 @@ Introduction to GitHub for collaborative projects
 
 ## [1) Installing Git in our computer ]()
 
-### Install Git on Linux: Debian / Ubuntu (apt-get)
+### a) Install Git on Linux: Debian / Ubuntu (apt-get)
 <details><summary>Example</summary>
 <p>
 From your terminal, install Git using apt-get:
@@ -28,7 +28,7 @@ git config --global user.email "mark.zuckerberg@facebook.com"
 <p>
 </details>
 
-### Install Git on Mac OS X
+### b) Install Git on Mac OS X
 <details><summary>Example</summary>
 <p>
   
@@ -74,7 +74,7 @@ git config --global user.email "mark.zuckerberg@facebook.com"
 <p>
 </details>
 
-### Install Git on Windows
+### c) Install Git on Windows
 <details><summary>Example</summary>
 <p>
   
@@ -109,7 +109,12 @@ git config --global user.email "mark.zuckerberg@facebook.com"
 <p>
 </details>
 
+
+### Basic commands for git usage:
+[Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+
 ## [2) Creating an account on GitHub](https://docs.github.com/en/get-started/quickstart/creating-an-account-on-github)
+
 
 ## [3) Creating a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
 
