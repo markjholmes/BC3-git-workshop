@@ -1,134 +1,176 @@
-# BC3-git-workshop
+---
+title: "Introduction to GitHub for collaborative projects"
+author: Luis Javier Chueca, Mark Holmes
+date: today
+format: 
+  revealjs:
+    logo: WS-slides/media/image3.png
+    theme: presentation-theme-bc3.scss
+    slide-number: true
+number-sections: true
+code-line-numbers: false
+code-copy: true
+---
+
+# What is Git?
+
 Introduction to GitHub for collaborative projects
 
-## [1) Installing Git in our computer ]()
+![](WS-slides/media/image28.png){fig-align="center"}
 
-### a) Install Git on Linux: Debian / Ubuntu (apt-get)
-<details><summary>Example</summary>
-<p>
-From your terminal, install Git using apt-get:
+# Why use Git?
+
+![](WS-slides/media/image46.png){fig-align="center"}
+
+# The key ideas of Git
+
+# GitHub
+
+# Creating an account on GitHub
+
+1. Navigate to [github.com](https://github.com/)
+2. Click Sign up
+3. Follow the prompts to create your personal account
+
+# Installing Git: Windows
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/1024px-Windows_logo_-_2012.svg.png){fig-align="center"}
+
+## Install
+
+1. Download the latest version for [Windows installer](https://gitforwindows.org/)
+2. Follow the instructions as provided in the Git Setup wizard screen
+
+![](https://peateasea.de/assets/images/git_setup_wizard_window.png){fig-align="center"}
+
+## Verify it worked
+
+3. Open Windows command prompt (or Git Bash if you selected not to use the standard Git Windows Command Prompt during the Git installation).
+
+  <!-- These are my recomendations, but please, feel free to explore and consider all options:
+    - Use bundled OpenSSH
+    - Use the OpenSSL library
+    - Checkout Windows-style, commit Unix-style line endings
+    - Use MinTTY (the default terminal of MSYS2)
+    - Fast-forward or merge
+    - Git Credential Manager
+    - Enable file system caching
+    - Override the default branch name for new repositories
+    - Git from the command line and also from 3rd-party software -->
+  
+4. Type:
+
+```shell
+git version
+```
+
+which should return something like:
+
+```shell
+git version 2.34.1
+```
+
+## Configure
+
+5. Configure Git username and email using the following commands, replacing Mark's name with your own:
+
+```shell
+git config --global user.name "Mark Zuckerberg"
+git config --global user.email "mark.zuckerberg@facebook.com"
+```
+
+::: {.notes}
+These details will be associated with any commits that you create
+:::
+
+# Install Git on Mac OS X
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/814px-Apple_logo_black.svg.png){fig-align="center"}
+
+## Install
+
+1. Open your terminal and install Git using Homebrew:
+
+```shell
+brew install git
+```
+
+## Verify it worked
+
+2. Verify the installation was successful by typing:
+
+```shell
+git --version
+```
+
+## Configure
+
+3. Configure your Git username and email using the following commands, replacing Mark's name with your own. These details will be associated with any commits that you create:
+
+```shell
+git config --global user.name "Mark Zuckerberg"
+git config --global user.email "mark.zuckerberg@facebook.com"
+```
+
+4. Check if you already have MacPorts installed:
+
+```shell
+which port
+```
+
+Which should return: `/opt/local/bin/port`
+
+5. If not, install it:
+
+```shell
+sudo port install git
+```
+
+# Install Git on Linux/WSL: Debian / Ubuntu
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1727px-Tux.svg.png){fig-align="center"}
+
+## Install
+
+1. From your terminal, install Git using `apt-get`:
   
 ```shell
 sudo apt-get update
 sudo apt-get install git
 ```
 
-Verify the installation was successful by typing:
+## Verify it worked
+
+2. Verify the installation was successful by typing:
 
 ```shell
 git --version
 ```
 
-Configure your Git username and email using the following commands, replacing Mark's name with your own. These details will be associated with any commits that you create:
+## Configure
+
+3. Configure your Git username and email using the following commands, replacing Mark's name with your own. These details will be associated with any commits that you create:
 
 ```shell
 git config --global user.name "Mark Zuckerberg"
 git config --global user.email "mark.zuckerberg@facebook.com"
 ```
-<p>
-</details>
 
-### b) Install Git on Mac OS X
-<details><summary>Example</summary>
-<p>
-  
-#### Install from Homebrew
+# Basic commands for git usage:
 
-  Open your terminal and install Git using Homebrew:
-  ```shell
-  brew install git
-  ```
-  Verify the installation was successful by typing:
-  ```shell
-  git --version
-  ```
-  Configure your Git username and email using the following commands, replacing Mark's name with your own. These details will be associated with any commits that you create:
-  ```shell
-  git config --global user.name "Mark Zuckerberg"
-  git config --global user.email "mark.zuckerberg@facebook.com"
-  ```
-
-  Check if you already have MacPorts installed:
-  ```shell
-  which port
-  ```
-  It should returns: `/opt/local/bin/port`
-  
-  If not, install it:
-  ```shell
-  sudo port install git
-  ```
-
-#### Install from an Installer
-(I do not recommend it)
-
-  1. Navigate to the latest [macOS Git Installer](https://sourceforge.net/projects/git-osx-installer/) and download the latest version.
-  
-  2. Once the installer has started, follow the instructions as provided until the installation is complete.
-     
-  3. Verify the installation was successful by typing:
-  ```shell
-  git --version
-  ```
-
-<p>
-</details>
-
-### c) Install Git on Windows
-<details><summary>Example</summary>
-<p>
-  
-  1. Navigate to the latest Git for [Windows installer](https://gitforwindows.org/) and download the latest version.
-  
-  2. Once the installer has started, follow the instructions as provided in the Git Setup wizard screen until the installation is complete.
-   
-  3. Open the windows command prompt (or Git Bash if you selected not to use the standard Git Windows Command Prompt during the Git installation).
-
-    These are my recoomendations, but please, feel free to explore and consider all options:
-      - Use bundled OpenSSH
-      - Use the OpenSSL library
-      - Checkout Windows-style, commit Unix-style line endings
-      - Use MinTTY (the default terminal of MSYS2)
-      - Fast-forward or merge
-      - Git Credential Manager
-      - Enable file system caching
-      - Override the default branch name for new repositories
-      - Git from the command line and also from 3rd-party software
-   
-  5. Verify the installation was successful by typing:
-  ```shell
-  git version
-  ```
-
-  5. Configure your Git username and email using the following commands, replacing Mark's name with your own. These details will be associated with any commits that you create:
-  ```shell
-  git config --global user.name "Mark Zuckerberg"
-  git config --global user.email "mark.zuckerberg@facebook.com"
-  ```
-
-<p>
-</details>
-
-
-### Basic commands for git usage:
 [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 
-## [2) Creating an account on GitHub](https://docs.github.com/en/get-started/quickstart/creating-an-account-on-github)
+# Creating a new repository
 
+[Creating a repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
 
-## [3) Creating a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
+1. Short and concise name
+2. Avoid special characters and white spaces
+3. Select between `public` or `private`
+4. Add `.gitignore`and select `R`
+5. Edit `README`
 
-  a) Short and concise name
-
-  b) Avoid special characters and white spaces
-
-  c) Select between `public` or `private`
-
-  d) Add `.gitignore`and select `R`
-
-  e) Edit `README`
-
-## [4) Clonning a repository]()
+# Cloning a repository
 
 On GitHub repository go to `Code` -> `Copy to clipboard`
 
@@ -136,12 +178,10 @@ Link the repository to `RStudio` / `Visual Studio Code` / Others
 
 On RStudio:
   - `File`: `New Project`: `Version Control`: `Git`
-  
   - Paste `URL` and insert `Project directory name`
-
   - `Create Project`
 
-## [5) Creating a new R project ]()
+# Creating a new R project
 
-
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/991px-R_logo.svg.png){fig-align="center"}
 
