@@ -4,7 +4,7 @@ $body-color: #fff;
 $link-color: #4EBF7B;
 $body-bg: #11302D;
 
-$presentation-font-size-root: 35px;
+$presentation-font-size-root: 30px;
 $presentation-h1-font-size: 1.5em;
 $presentation-h2-font-size: 1.25em;
 $presentation-h3-font-size: 1.12em;
@@ -25,10 +25,10 @@ $code-color: #000000;
 
 /*-- scss:rules --*/
 
-.reveal .slide blockquote {
-  border-left: 3px solid $text-muted;
-  padding-left: 0.5em;
-}
+// .reveal .slide blockquote {
+//   border-left: 3px solid $text-muted;
+//   padding-left: 0.5em;
+// }
 
 .reveal .slide code {
   background-color: $code-bg;
