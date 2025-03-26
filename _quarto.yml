@@ -1,5 +1,21 @@
 project:
-  title: "presentation"
+  title: "Introduction to GitHub for collaborative projects"
 
+author: Luis Javier Chueca, Mark Holmes
+date: today
+format: 
+  revealjs:
+    logo: WS-slides/media/image3.png
+    theme: presentation-theme-bc3.scss
+    monofont: "Cascadia Code"
+    slide-number: true
+    auto-stretch: false
+    css: style.css
+number-sections: true
+code-line-numbers: false
+code-copy: true
+toc: true
+toc-depth: 1
+code-overflow: wrap
 
 

@@ -1,0 +1,39 @@
+# What is Git?
+
+https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
+
+:::: {.columns}
+
+
+::: {.column width="70%"}
+> **Linus Torvalds: (creator)**
+> 
+> *"git" can mean anything, depending on your mood.*
+> 
+> - *random three-letter combination that is pronounceable, and not actually used by any common UNIX command*
+> - *stupid. contemptible and despicable. simple.*
+> - *"global information tracker"*
+> - *"goddamn idiotic truckload of sh\*t"*
+
+:::
+
+::: {.column width="30%"}
+![](https://logowik.com/content/uploads/images/git6963.jpg){fig-align="center"}
+:::
+
+::::
+
+:::{.footer}
+Image source: logowik.com
+:::
+
+# Why use Git?
+
+![](WS-slides/media/image46.png){fig-align="center"}
+
+:::{.footer}
+Image source: Luis Javier Chueca
+:::
+
+# The key ideas of Git
+

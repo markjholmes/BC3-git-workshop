@@ -1,0 +1,11 @@
+# Hosting on GitHub
+
+## Creating an account on GitHub
+
+1. Navigate to [github.com](https://github.com/)
+2. Click Sign up
+3. Follow the prompts to create your personal account
+
+## Create a repository
+
+
