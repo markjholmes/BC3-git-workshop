@@ -1,5 +1,4 @@
 project:
-  title: "Introduction to GitHub for collaborative projects"
   render: 
     - presentation.qmd
 

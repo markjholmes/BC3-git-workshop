@@ -1,3 +1,10 @@
+---
+title: My Slide Show
+# title-slide-attributes:
+#   data-background-image: /path/to/title_image.png
+#   data-background-size: contain
+#   data-background-opacity: "0.5"
+---
 
 <!-- why git? -->
 {{< include introduction.qmd >}}
