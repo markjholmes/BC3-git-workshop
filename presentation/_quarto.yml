@@ -2,11 +2,10 @@ project:
   render: 
     - presentation.qmd
 
-author: Luis Javier Chueca, Mark Holmes
 date: today
 format: 
   revealjs:
-    logo: WS-slides/media/image3.png
+    logo: images/image3.png
     theme: presentation-theme-bc3.scss
     monofont: "Cascadia Code"
     slide-number: true

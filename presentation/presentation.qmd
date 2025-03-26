@@ -1,10 +1,26 @@
 ---
-title: My Slide Show
+title: BC3 GitHub
+author: Mark Holmes, Luis Javier Chueca
+date: today
 # title-slide-attributes:
 #   data-background-image: /path/to/title_image.png
 #   data-background-size: contain
 #   data-background-opacity: "0.5"
 ---
+
+# Overview
+
+::: {.callout-tip appearance="minimal"}
+Git is great, for a number of reasons that are not always immediately obvious
+:::
+
+::: {.callout-warning appearance="minimal"}
+It's not always for every project and requires some investment from you to get it working
+:::
+
+::: {.callout appearance="minimal"}
+Let's get into the **why** and the **how** 
+:::
 
 <!-- why git? -->
 {{< include introduction.qmd >}}
