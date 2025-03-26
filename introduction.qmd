@@ -34,6 +34,16 @@ Image source: logowik.com
 
 # Why use Git?
 
+::: {.callout-note appearance="minimal"}
+
+Doing your work becomes tightly integrated with organizing, recording, and disseminating it. It's not a separate, burdensome task you are tempted to neglect
+
+:::
+
+:::{.footer}
+From [Excuse me, do you have a moment to talk about version control?](https://doi.org/10.7287/peerj.preprints.3159v2)
+:::
+
 ## General workflow
 
 ![](WS-slides/media/image46.png){fig-align="center"}

@@ -8,6 +8,9 @@
 <!-- github integration -->
 {{< include github.qmd >}}
 
+<!-- repo structure -->
+{{< include repository-structure.qmd >}}
+
 <!-- installing git -->
 {{< include installation.qmd >}}
 

@@ -1,0 +1,162 @@
+# Structuring projects
+
+Having a consistent file structure in coding projects saves a lot of headache with losing/misusing files, figures, data, etc. There is a fairly standard structure that is widely used in anything involving coding that I have adapted to what I do and that I think it would be helpful to follow
+
+-   for [sharing]{.underline}: reduces barrier to entry to another persons repository
+-   for [organisation]{.underline}: a trillion loose files scattered across your Documents folder is bad
+-   for [compartmentalisation]{.underline}: it is useful to separate projects from each other to help you get stuff done rather than having one big mess
+-   for [reproducibility]{.underline}: if you lose everything, it doesn't matter -- the important parts are backed up and you can rebuild everything by running a script. You can also fix any bugs that have accumulated by deleting the contents of Project/data and Project/figures
+
+#  {#section style="page-break-before:always; "}
+
+- `Project`: Keep your projects separate! Have one folder per project and organise it
+- `/src`: Code files ( i.e. files with ".r" extension). These do the actual work and are called later when needed
+  - some people call this `R`
+- `/data`: Stores data that gets called by code files. Not backed up to GitHub, only local
+- `/figures`: Saving figures to be used later in documents. Not backed up to GitHub, only local
+- `/documents`: Write-ups and explanations
+- `README.md`: Text file explaining what is meant to be happening and how the repository is structured
+- `.gitignore`: File that tells git which files to not host. We **do not want** pdf, png, xlsx, docx, etc. floating around GitHub. They are generated files and we only need source files
+
+It's not a problem to have **more** folders (e.g. "presentations", "testing") but preferably **not fewer**. Also you should have your Rproj file here which will help stuff run smoothly and prevent any working directory chaos
+
+## README.md
+
+The readme should contain any information needed for another member of the team to understand the repository
+
+Generally, we want to state:
+
+-  the purpose of the repository
+-  broadly, how it's being done
+-  the file structure (in case you've changed or customised)
+
+## Project/src
+
+- `get-data.r`: Check whether the data we need is already present in Project/data and fetch from remote location (Google Drive) if not yet there
+- `clean-data.r`: Transform raw data into more usable format
+- `analysis.r`: Run the analysis and stats and perform any transformations that are not universally-relevant
+- `plot.r`: Generate plots and save in Project/figures
+- `run-project.r`: You can have a master script that calls the rest to ensure that everything is clean
+
+Within src I usually have a pretty consistent structure. I might here also include files from other repositories as submodules but that's a bit technical
+
+At the start of this, I create the figures directory with
+
+```{r}
+if (!dir.exists(\"figures\")) {
+    dir.create(\"figures\")
+}
+```
+
+At the start of this, I create the data directory with
+
+```{r}
+if (!dir.exists("data\")) {
+    dir.create(\" data \")
+}
+```
+
+### Why separate files?
+
+- Individual files should serve a specific purpose
+- Having a single 1000-line file that does everything is very difficult to manage Compartmentalise!
+- Two people should not be working on the same thing at the same time
+
+## Project/data
+
+- `data-01.csv`
+- `data-02.csv`
+- `data-03.csv`
+
+And then just plonk in the data. Pay attention to naming conventions (e.g. YYYY-MM-DD)
+
+If you have lots of different kinds maybe put them in subfolders
+
+Same for if you need to group the data somehow
+
+Data folder should start off empty - we don't really want to be hosting data on GitHub unless it's fairly small and in a nice format (csv)
+
+## Project/figures
+
+- `biomass-over-time.pdf`
+- `herbivory-over-time.pdf`
+- `herbivory-by-biomass.pdf`
+- `/extra`
+
+Give them informative names (not just fig-1) but as concise as possible (don't include the word "figure" or "plot" for example)
+
+Preferably save in vector format (svg or pdf) ***where possible*** (think about memory usage if lots of points)
+
+I tend to also make subfolders for extra plots that are not directly relevant but that I don't want to lose -- only keep "main" plots in the folder
+
+Figures folder also starts off empty
+
+#  {#section-5 style="page-break-before:always; "}
+
+Project/documents
+
+article.Rmd
+
+article.pdf
+
+EGM-presentation-2025-01-30.Rmd
+
+EGM-presentation-2025-01-30.pdf
+
+bibliography.bib
+
+e.g. the main text which just contains the writeup along with embedded images from Project/figures
+
+and the output of that
+
+keep track of documents generated for a specific purpose/meeting
+
+Documents can be as simple as a single .Rmd file if you're efficient but can also be more generalised. Generally contains both the input (Rmd) and output (pdf) file pairs
+
+Keep your Zotero bibliography export file here for when you need to cite stuff in your documents
+
+#  {#section-6 style="page-break-before:always; "}
+
+[**.gitignore**]{.underline}
+
+[]{.underline}
+
+.gitignore files are just lists that tell git not to sync a file/folder/file type.
+
+You can get a standard R.gitgnore from [[https://github.com/github/gitignore/blob/main/R.gitignore]{.underline}](https://github.com/github/gitignore/blob/main/R.gitignore) which will tell github to ignore files like .Rdata etc. You'll then also want to add stuff like:
+
+.xlsx
+
+/data/
+
+/figures/
+
+etc.
+Note that we do not want data or figures to be on GitHub. Data lives on Google Drive and figures are generated from the code so don't need to be backed up anywhere
+
+#  {#section-7 style="page-break-before:always; "}
+
+**Code** lives here for better [collaboration]{.underline}, [sharing]{.underline}, and [version control]{.underline}
+
+**Raw data** lives here for [permanent]{.underline} storage
+
+Local
+
+You work here, including /data and /figures in your .gitignore
+
+pull
+
+push
+
+download
+via R to /data
+
+**NOT DATA!**
+
+**
+
+**NOT FIGURES!**
+
+**NOT PDFS!**
+
+**JUST CODE!!**

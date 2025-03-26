@@ -20,3 +20,7 @@ toc: false
 # toc-depth: 1
 code-overflow: wrap
 slide-level: 2
+
+execute: 
+  eval: false
+  echo: true

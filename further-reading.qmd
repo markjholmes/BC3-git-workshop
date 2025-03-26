@@ -1,7 +1,8 @@
-# Further reading
-
 ::: {.center-y}
 
-https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
+# Further reading
+
+- [Git - Getting Started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+- [Happy Git for R](https://happygitwithr.com/)
 
 :::
