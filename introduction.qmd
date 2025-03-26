@@ -15,6 +15,8 @@ toc-depth: 1
 code-overflow: wrap
 ---
 
+https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
+
 # What is Git?
 
 :::: {.columns}
@@ -199,6 +201,73 @@ git config --global user.email "mark.zuckerberg@facebook.com"
 # Basic commands for git usage:
 
 [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+
+- `git clone`
+- `git add`
+- `git commit`
+- `git push`
+- `git pull`
+- `git request-pull`
+- `git branch`
+- `git merge` 
+- `git clean`
+
+# `request-pull` vs `merge`
+
+"Hey guys! Please look at this, see whether it looks good, and confirm the request if it is"
+
+"Hey guys! Here is my code, whether you like it or not"
+
+# Exercises
+
+open 
+
+navigate to a folder
+
+```{bash}
+cd path/to/dir
+```
+
+clone the repo
+
+```{bash}
+git clone github.com/markjholmes/test-repo.git
+```
+
+## Exercise 1
+
+- Rodrigo and Lucille want to collaborate on a repository
+- The repository is hosted at github.com/RECODYN/repo
+- Inside this are two files
+  - data.r
+  - analysis.r 
+- Lucille wants to fix some errors in how the data is being downloaded and computed
+- Rodrigo wants to change the statistical test
+
+**What do they do?**
+
+:::{.callout-tip title="Lucille"}
+```shell
+git clone github.com/RECODYN/repo.git
+cd repo
+git checkout -b lucille-data-fix
+```
+
+lucille makes her changes to data.r. nothing structural changes
+
+```shell
+git add data.r 
+git commit -m "updated data download link"
+git push
+
+```
+
+:::
+
+:::{.callout-tip title="Rodrigo"}
+:::
+
+## Exercise 2
 
 # Creating a new repository
 
