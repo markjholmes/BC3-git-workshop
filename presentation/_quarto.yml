@@ -22,3 +22,5 @@ slide-level: 3
 execute: 
   eval: false
   echo: true
+mermaid: 
+  theme: forest

@@ -107,6 +107,8 @@ Note that we do not want data or figures to be on GitHub. Data lives on Google D
 # Rules
 
 ```{mermaid}
+%%| echo: false
+
 flowchart LR
 
 subgraph a["GitHub"]
@@ -128,6 +130,8 @@ C -->|upload| B
 ```
 
 ```{mermaid}
+%%| echo: false
+
 flowchart LR
 
 subgraph a["GitHub"]
