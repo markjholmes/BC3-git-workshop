@@ -7,11 +7,11 @@ Having a consistent file structure in coding projects saves a lot of headache wi
 -   for [compartmentalisation]{.underline}: it is useful to separate projects from each other to help you get stuff done rather than having one big mess
 -   for [reproducibility]{.underline}: if you lose everything, it doesn't matter -- the important parts are backed up and you can rebuild everything by running a script. You can also fix any bugs that have accumulated by deleting the contents of Project/data and Project/figures
 
-#  {#section style="page-break-before:always; "}
+## Project
 
 - `Project`: Keep your projects separate! Have one folder per project and organise it
 - `/src`: Code files ( i.e. files with ".r" extension). These do the actual work and are called later when needed
-  - some people call this `R`
+  - some people call this `/R` when exclusively using R
 - `/data`: Stores data that gets called by code files. Not backed up to GitHub, only local
 - `/figures`: Saving figures to be used later in documents. Not backed up to GitHub, only local
 - `/documents`: Write-ups and explanations
@@ -38,7 +38,7 @@ Generally, we want to state:
 - `plot.r`: Generate plots and save in Project/figures
 - `run-project.r`: You can have a master script that calls the rest to ensure that everything is clean
 
-Within src I usually have a pretty consistent structure. I might here also include files from other repositories as submodules but that's a bit technical
+Within src I usually have a pretty consistent structure. I might here also include files from other repositories as [submodules]() but that's a bit technical.
 
 At the start of this, I create the figures directory with
 
@@ -91,23 +91,15 @@ I tend to also make subfolders for extra plots that are not directly relevant bu
 
 Figures folder also starts off empty
 
-#  {#section-5 style="page-break-before:always; "}
+## Project/documents
 
-Project/documents
+- `article.Rmd`
+- `article.pdf`
+- `presentation-2025-01-30.Rmd`
+- `presentation-2025-01-30.pdf`
+- `bibliography.bib`
 
-article.Rmd
-
-article.pdf
-
-EGM-presentation-2025-01-30.Rmd
-
-EGM-presentation-2025-01-30.pdf
-
-bibliography.bib
-
-e.g. the main text which just contains the writeup along with embedded images from Project/figures
-
-and the output of that
+e.g. the main text which just contains the writeup along with embedded images from `Project/figures` and the output of that
 
 keep track of documents generated for a specific purpose/meeting
 
@@ -115,26 +107,94 @@ Documents can be as simple as a single .Rmd file if you're efficient but can als
 
 Keep your Zotero bibliography export file here for when you need to cite stuff in your documents
 
-#  {#section-6 style="page-break-before:always; "}
-
-[**.gitignore**]{.underline}
-
-[]{.underline}
+## **.gitignore**
 
 .gitignore files are just lists that tell git not to sync a file/folder/file type.
 
 You can get a standard R.gitgnore from [[https://github.com/github/gitignore/blob/main/R.gitignore]{.underline}](https://github.com/github/gitignore/blob/main/R.gitignore) which will tell github to ignore files like .Rdata etc. You'll then also want to add stuff like:
 
-.xlsx
-
-/data/
-
-/figures/
+- .xlsx
+- /data/
+- /figures/
 
 etc.
 Note that we do not want data or figures to be on GitHub. Data lives on Google Drive and figures are generated from the code so don't need to be backed up anywhere
 
-#  {#section-7 style="page-break-before:always; "}
+# Rules
+
+```{mermaid}
+flowchart LR
+
+subgraph a["GitHub"]
+    A[Code only!]
+end
+
+subgraph b["Google Drive"]
+    B[Raw data]
+end
+
+subgraph c["Local machine"]
+    C[Working directory]
+end
+
+A -->|git pull| C
+C -->|git push| A
+B -->|download| C
+C -->|upload| B
+```
+
+```{mermaid}
+flowchart LR
+
+subgraph a["GitHub"]
+    A[Code only!]
+end
+
+subgraph b["Google Drive"]
+    B[Raw data]
+    B2[Cleaned data]
+end
+
+subgraph e["Lab machine"]
+    C1[raw-data.csv]
+end
+
+subgraph c["Local machine"]
+    subgraph cb["/src"]
+        C2["/get-data.r"]
+        C3["/clean-data.r"]
+        C4["/analyse-data.r"]
+        C5["/create-figures.r"]
+    end
+    subgraph cc["/documents"]
+        C6["/writeup.Rmd"]
+        C7["/writeup.pdf"]
+        C6 -->|R Markdown| C7
+    end
+    subgraph cd["/figures"]
+        C8["/figure-1.pdf"]
+        C8 -->|R Markdown| C7
+    end
+end
+
+C5 --> C8
+
+subgraph d["Lab/field"]
+    D((Experiment))
+end
+
+a -->|git pull| cb
+cb -->|git push| a
+
+C6 -->|git pull| a
+a -->|git push| C6
+
+B -->|download| C2
+C1 -->|upload| B
+C3 -->|upload| B2
+B2 -->|download| C4
+D -->|save| C1
+```
 
 **Code** lives here for better [collaboration]{.underline}, [sharing]{.underline}, and [version control]{.underline}
 
