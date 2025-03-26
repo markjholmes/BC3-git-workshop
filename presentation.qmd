@@ -17,6 +17,9 @@
 <!-- using rstudio IDE -->
 {{< include rstudio.qmd >}}
 
+<!-- vscode and positron -->
+{{< include vscode-positron.qmd >}}
+
 <!-- exercises to practice -->
 {{< include exercises.qmd >}}
 

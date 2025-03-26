@@ -1,6 +1,7 @@
-.inline{
+.inline {
     margin: 0!important;
     height: 30px;
+    vertical-align: center;
 }
 
 .center-y {
