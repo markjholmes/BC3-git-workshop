@@ -20,7 +20,7 @@ $presentation-heading-text-shadow: none;
 $presentation-heading-font-weight: 600;
 $presentation-h1-text-shadow: none;
 
-$code-bg: #9eddd7;
+$code-bg: $link-color;// #9eddd7;
 $code-color: #000000;
 
 /*-- scss:rules --*/
