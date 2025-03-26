@@ -198,6 +198,27 @@ git config --global user.name "Mark Zuckerberg"
 git config --global user.email "mark.zuckerberg@facebook.com"
 ```
 
+# Terminal vs UI
+
+::: {.columns}
+::: {.column}
+**Terminal**
+- harder to get started
+- more dangerous
+- much easier to do complicated operations
+:::
+::: {.column}
+**UI**
+- easier to use
+- generally safer
+- less functionality
+:::
+:::
+
+::: {.callout-tip appearance="minimal"}
+Use the UI for general tasks but be familiar with the terminal in case of problems
+:::
+
 # Basic commands for git usage:
 
 [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
