@@ -1,5 +1,7 @@
 project:
   title: "Introduction to GitHub for collaborative projects"
+  render: 
+    - presentation.qmd
 
 author: Luis Javier Chueca, Mark Holmes
 date: today
@@ -14,8 +16,7 @@ format:
 number-sections: true
 code-line-numbers: false
 code-copy: true
-toc: true
-toc-depth: 1
+toc: false
+# toc-depth: 1
 code-overflow: wrap
-
-
+slide-level: 2

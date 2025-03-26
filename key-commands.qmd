@@ -54,3 +54,10 @@
 
 # Terminal vs UI
 
+:::{.center-y}
+
+> *But why should I use the terminal there are buttons that do everything for me right here*
+
+Buttons are great
+
+:::

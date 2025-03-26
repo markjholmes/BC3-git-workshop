@@ -1,9 +1,11 @@
 # What is Git?
 
-https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
+## From the creator
 
-:::: {.columns}
+::::: {.columns}
 
+
+::::{.center-y}
 
 ::: {.column width="70%"}
 > **Linus Torvalds: (creator)**
@@ -27,7 +29,12 @@ https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
 Image source: logowik.com
 :::
 
+:::::
+
+
 # Why use Git?
+
+## General workflow
 
 ![](WS-slides/media/image46.png){fig-align="center"}
 
@@ -35,5 +42,31 @@ Image source: logowik.com
 Image source: Luis Javier Chueca
 :::
 
-# The key ideas of Git
+## The key ideas of Git
 
+
+:::::{.center-y}
+:::: {.columns}
+:::: {.column}
+
+::: {.callout-tip title="Git is..."}
+
+- For collaborating and sharing code
+- For version control
+- For 
+
+:::
+
+::::
+:::: {.column}
+
+::: {.callout-warning title="Git is NOT..."}
+
+- A file backup system similar to OneDrive or Google Drive
+- 
+
+:::
+
+::::
+::::
+:::::
