@@ -204,6 +204,8 @@ git config --global user.email "mark.zuckerberg@facebook.com"
 
 - `git clone`
 - `git add`
+- `git rm`
+  - `git rm --cached`
 - `git commit`
 - `git push`
 - `git pull`
