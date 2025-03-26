@@ -1,10 +1,24 @@
-{{<  >}}
 
+<!-- why git? -->
 {{< include introduction.qmd >}}
 
+<!-- terminology -->
+{{< include terminology.qmd >}}
+
+<!-- github integration -->
 {{< include github.qmd >}}
 
+<!-- installing git -->
 {{< include installation.qmd >}}
 
+<!-- main commands we will use -->
 {{< include key-commands.qmd >}}
 
+<!-- using rstudio IDE -->
+{{< include rstudio.qmd >}}
+
+<!-- exercises to practice -->
+{{< include exercises.qmd >}}
+
+<!-- other resources -->
+{{< include further-reading.qmd >}}

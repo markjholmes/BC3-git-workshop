@@ -1,0 +1,9 @@
+# Terminology
+
+**Version control**: the system
+
+**Git**: a program
+
+**GitHub**: a website
+
+**Repository**: a folder
