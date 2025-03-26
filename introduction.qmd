@@ -6,7 +6,10 @@ format:
   revealjs:
     logo: WS-slides/media/image3.png
     theme: presentation-theme-bc3.scss
+    monofont: "Cascadia Code"
     slide-number: true
+    auto-stretch: false
+    css: style.css
 number-sections: true
 code-line-numbers: false
 code-copy: true
@@ -68,172 +71,132 @@ Image source: Luis Javier Chueca
 
 # Installing Git
 
-## Windows
+## Install Git on Windows ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/1024px-Windows_logo_-_2012.svg.png){.center}
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/1024px-Windows_logo_-_2012.svg.png){fig-align="center"}
+:::{.center-y}
+
+| \# | What | Commands |
+| :---: | --- | --- |
+| 1 | Install using Powershell | ```winget install -e --id Git.Git``` |
+| 2 | Open git bash | |
+| 3 | Verify install | ```git --version``` |
+| 4 | Configure username | ```git config --global user.name "My Name"``` |
+| 5 | Configure email | ```git config --global user.email "me@email.com"``` |
+
+: {.striped .hover tbl-colwidths="[5,20,75]"}
+
+:::
 
 :::{.footer}
 Image source: wikimedia.org
 :::
 
-### Install
+## Install Git on Mac OS ![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Apple_logo_white.svg/1724px-Apple_logo_white.svg.png){.center}
 
-1. Download the latest version for [Windows installer](https://gitforwindows.org/)
-2. Follow the instructions as provided in the Git Setup wizard screen
+:::{.center-y}
 
-![](https://peateasea.de/assets/images/git_setup_wizard_window.png){fig-align="center"}
+| \# | What | Commands |
+| :---: | --- | --- |
+| 1 | Install via MacPorts | ```sudo port install git``` |
+| 2 | Verify install | ```git --version``` |
+| 3 | Configure username | ```git config --global user.name "My Name"``` |
+| 4 | Configure email | ```git config --global user.email "me@email.com"``` |
 
-:::{.footer}
-peateasea.de
+: {.striped .hover tbl-colwidths="[5,20,75]"}
+
 :::
-
-### Verify it worked
-
-3. Open Windows command prompt (or Git Bash if you selected not to use the standard Git Windows Command Prompt during the Git installation).
-  
-4. Type:
-
-```shell
-git version
-```
-
-which should return something like:
-
-```shell
-git version 2.34.1
-```
-
-### Configure
-
-5. Configure Git username and email using the following commands, replacing Mark's name with your own:
-
-```shell
-git config --global user.name "Mark Zuckerberg"
-git config --global user.email "mark.zuckerberg@facebook.com"
-```
-
-::: {.notes}
-These details will be associated with any commits that you create
-:::
-
-## Install Git on Mac OS
-
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/814px-Apple_logo_black.svg.png){fig-align="center"}
 
 :::{.footer}
 Image source: wikimedia.org
 :::
 
-### Install
+## Install Git on Linux/WSL: Debian / Ubuntu ![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1727px-Tux.svg.png){.center}
 
-1. Open your terminal and install Git using Homebrew:
+:::{.center-y}
 
-```shell
-brew install git
-```
+| \# | What | Commands |
+| :---: | --- | --- |
+| 1 | Prepare to install | ```sudo apt-get update``` |
+| 2 | Install | ```sudo apt-get install git``` |
+| 3 | Verify install | ```git --version``` |
+| 4 | Configure username | ```git config --global user.name "My Name"``` |
+| 5 | Configure email | ```git config --global user.email "me@email.com"``` |
 
-### Verify it worked
+: {.striped .hover tbl-colwidths="[5,20,75]"}
 
-2. Verify the installation was successful by typing:
-
-```shell
-git --version
-```
-
-### Configure
-
-3. Configure your Git username and email using the following commands, replacing Mark's name with your own. These details will be associated with any commits that you create:
-
-```shell
-git config --global user.name "Mark Zuckerberg"
-git config --global user.email "mark.zuckerberg@facebook.com"
-```
-
-4. Check if you already have MacPorts installed:
-
-```shell
-which port
-```
-
-Which should return: `/opt/local/bin/port`
-
-5. If not, install it:
-
-```shell
-sudo port install git
-```
-
-## Install Git on Linux/WSL: Debian / Ubuntu
-
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1727px-Tux.svg.png){fig-align="center"}
-
+:::
 
 :::{.footer}
 Image source: wikimedia.org
 :::
-
-### Install
-
-1. From your terminal, install Git using `apt-get`:
-  
-```shell
-sudo apt-get update
-sudo apt-get install git
-```
-
-### Verify it worked
-
-2. Verify the installation was successful by typing:
-
-```shell
-git --version
-```
-
-### Configure
-
-3. Configure your Git username and email using the following commands, replacing Mark's name with your own. These details will be associated with any commits that you create:
-
-```shell
-git config --global user.name "Mark Zuckerberg"
-git config --global user.email "mark.zuckerberg@facebook.com"
-```
 
 # Terminal vs UI
 
-::: {.columns}
-::: {.column}
-**Terminal**
-- harder to get started
-- more dangerous
-- much easier to do complicated operations
-:::
-::: {.column}
-**UI**
-- easier to use
-- generally safer
-- less functionality
-:::
-:::
+## Comparison
+
+::::{.center-y}
+
+| Terminal | UI |
+| :---: | :---: |
+| harder to get started | easier to use |
+| more dangerous | generally safer |
+| can do more complicated operations | less functionality |
+
+: {tbl-colwidths="[50,50]"}
 
 ::: {.callout-tip appearance="minimal"}
-Use the UI for general tasks but be familiar with the terminal in case of problems
+**Use the UI for general tasks but be familiar with the terminal in case of problems**
 :::
+
+::::
 
 # Basic commands for git usage:
 
+::: {.columns}
+
+::: {.column}
+**Essential**
+
+1. `git clone`
+2. `git add`
+3. `git commit`
+4. `git push`
+5. `git pull`
+:::
+
+::: {.column}
+**Good**
+
+6. `git rm` and `git rm --cached`
+7. `git branch`
+8. `git request-pull`
+9. `git merge` 
+10. `git status`
+11. `git clean`
+12. `git stash` and `git stash apply`
+:::
+
+:::
+
 [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 
-- `git clone`
-- `git add`
-- `git rm`
-  - `git rm --cached`
-- `git commit`
-- `git push`
-- `git pull`
-- `git request-pull`
-- `git branch`
-- `git merge` 
-- `git clean`
+## Essentials
+
+1. `git clone`: get a remote repository and put it on your machine
+2. `git add`: add a file to version control
+3. `git commit`: create a new version of the repository incorporating your changes
+4. `git push`: send your changes to the remote repository
+5. `git pull`: get remote changes to the repository
+
+## Good to know
+
+6. `git rm` and `git rm --cached`: remove files entirely or just from version control
+7. `git branch`: create a separate branch of the repository to work on a new idea
+8. `git request-pull`: add your changes to the remote repository the nice way 
+9. `git merge`: add your changes to the remote repository the hard way
+10. `git status`: see what's happening locally
+11. `git clean`: remove any files that aren't under version control
+12. `git stash` and `git stash apply`: temporarily put your changes to one side to resolve version control issues and then re-apply them once it's sorted
 
 # `request-pull` vs `merge`
 
