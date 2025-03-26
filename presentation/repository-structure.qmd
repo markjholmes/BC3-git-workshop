@@ -38,23 +38,7 @@ Generally, we want to state:
 - `plot.r`: Generate plots and save in Project/figures
 - `run-project.r`: You can have a master script that calls the rest to ensure that everything is clean
 
-Within src I usually have a pretty consistent structure. I might here also include files from other repositories as [submodules]() but that's a bit technical.
-
-At the start of this, I create the figures directory with
-
-```{r}
-if (!dir.exists(\"figures\")) {
-    dir.create(\"figures\")
-}
-```
-
-At the start of this, I create the data directory with
-
-```{r}
-if (!dir.exists("data\")) {
-    dir.create(\" data \")
-}
-```
+`src`/`R` should have a fairly consistent structure. Maybe with files from other repositories as [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) but that's a bit technical.
 
 ### Why separate files?
 

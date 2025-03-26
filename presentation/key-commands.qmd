@@ -2,19 +2,13 @@
 
 ## Essentials
 
-::: {.center-y}
-
 1. `git clone`: get a remote repository and put it on your machine
 2. `git add`: add a file to version control
 3. `git commit`: create a new version of the repository incorporating your changes
 4. `git push`: send your changes to the remote repository
 5. `git pull`: get remote changes to the repository
 
-:::
-
 ## Good to know
-
-::: {.center-y}
 
 1. `git rm` and `git rm --cached`: remove files entirely or just from version control
 2. `git branch`: create a separate branch of the repository to work on a new idea
@@ -26,26 +20,16 @@
 
 [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 
-:::
-
 # Tips
 
 ## `request-pull` vs `merge`
-
-:::{.center-y}
 
 "Hey guys! Please look at this, see whether it looks good, and confirm the request if it is"
 
 "Hey guys! Here is my code, whether you like it or not"
 
-:::
-
 ## Terminal vs UI
-
-:::{.center-y}
 
 > *But why should I use the terminal there are buttons that do everything for me right here*
 
-Buttons are great
-
-:::
+Buttons are great, but they can't solve all your problems

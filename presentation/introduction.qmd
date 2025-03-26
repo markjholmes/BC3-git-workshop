@@ -4,9 +4,6 @@
 
 ::::: {.columns}
 
-
-::::{.center-y}
-
 ::: {.column width="70%"}
 > **Linus Torvalds: (creator)**
 > 
@@ -23,7 +20,6 @@
 ![](https://logowik.com/content/uploads/images/git6963.jpg){fig-align="center"}
 :::
 
-::::
 
 :::{.footer}
 Image source: logowik.com
@@ -46,7 +42,7 @@ From [Excuse me, do you have a moment to talk about version control?](https://do
 
 ## General workflow
 
-![](WS-slides/media/image46.png){fig-align="center"}
+![](images/image46.png){fig-align="center"}
 
 :::{.footer}
 Image source: Luis Javier Chueca
@@ -55,7 +51,6 @@ Image source: Luis Javier Chueca
 ## The key ideas of Git
 
 
-:::::{.center-y}
 :::: {.columns}
 :::: {.column}
 
@@ -77,6 +72,5 @@ Image source: Luis Javier Chueca
 
 :::
 
-::::
 ::::
 :::::

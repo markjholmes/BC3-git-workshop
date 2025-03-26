@@ -17,7 +17,7 @@ code-copy: true
 toc: false
 # toc-depth: 1
 code-overflow: wrap
-slide-level: 2
+slide-level: 3
 
 execute: 
   eval: false
