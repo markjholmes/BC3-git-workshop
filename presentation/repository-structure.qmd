@@ -104,86 +104,10 @@ You can get a standard R.gitgnore from [[https://github.com/github/gitignore/blo
 etc.
 Note that we do not want data or figures to be on GitHub. Data lives on Google Drive and figures are generated from the code so don't need to be backed up anywhere
 
-# Rules
+# Workflow
 
-```{mermaid}
-%%| echo: false
-
-flowchart LR
-
-subgraph a["GitHub"]
-    A[Code only!]
-end
-
-subgraph b["Google Drive"]
-    B[Raw data]
-end
-
-subgraph c["Local machine"]
-    C[Working directory]
-end
-
-A -->|git pull| C
-C -->|git push| A
-B -->|download| C
-C -->|upload| B
-```
-
-```{mermaid}
-%%| echo: false
-
-flowchart LR
-
-subgraph a["GitHub"]
-    A[Code only!]
-end
-
-subgraph b["Google Drive"]
-    B[Raw data]
-    B2[Cleaned data]
-end
-
-subgraph e["Lab machine"]
-    C1[raw-data.csv]
-end
-
-subgraph c["Local machine"]
-    subgraph cb["/src"]
-        C2["/get-data.r"]
-        C3["/clean-data.r"]
-        C4["/analyse-data.r"]
-        C5["/create-figures.r"]
-    end
-    subgraph cc["/documents"]
-        C6["/writeup.Rmd"]
-        C7["/writeup.pdf"]
-        C6 -->|R Markdown| C7
-    end
-    subgraph cd["/figures"]
-        C8["/figure-1.pdf"]
-        C8 -->|R Markdown| C7
-    end
-end
-
-C5 --> C8
-
-subgraph d["Lab/field"]
-    D((Experiment))
-end
-
-a -->|git pull| cb
-cb -->|git push| a
-
-C6 -->|git pull| a
-a -->|git push| C6
-
-B -->|download| C2
-C1 -->|upload| B
-C3 -->|upload| B2
-B2 -->|download| C4
-D -->|save| C1
-```
-
+![](images/mermaid-workflow.svg)
+<!-- 
 **Code** lives here for better [collaboration]{.underline}, [sharing]{.underline}, and [version control]{.underline}
 
 **Raw data** lives here for [permanent]{.underline} storage
@@ -207,4 +131,4 @@ via R to /data
 
 **NOT PDFS!**
 
-**JUST CODE!!**
+**JUST CODE!!** -->
