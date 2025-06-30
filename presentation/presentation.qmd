@@ -22,6 +22,11 @@ It's not always for every project and requires some investment from you to get i
 Let's get into the **why** and the **how** 
 :::
 
+<!-- installing git -->
+{{< include installation.qmd >}}
+
+<!-- TODO: MAKE THE INTRO MATCH NOW THAT INSTALL COMES EARLIER -->
+
 <!-- why git? -->
 {{< include introduction.qmd >}}
 
@@ -34,8 +39,6 @@ Let's get into the **why** and the **how**
 <!-- repo structure -->
 {{< include repository-structure.qmd >}}
 
-<!-- installing git -->
-{{< include installation.qmd >}}
 
 <!-- main commands we will use -->
 {{< include key-commands.qmd >}}

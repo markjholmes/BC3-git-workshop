@@ -14,3 +14,11 @@
 
 
 :::
+
+# Alternative Git clients
+
+Recommended Git clients: https://happygitwithr.com/git-client and others https://git-scm.com/downloads/guis
+
+## GitKraken
+
+## Github desktop

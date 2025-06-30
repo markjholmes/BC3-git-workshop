@@ -1,0 +1,121 @@
+# Meeting 2025-06-30
+
+## Timing
+
+- when?
+- how much?
+- how to invite people?
+- how much time to devote to each part assuming we have 3h30
+  - intro (45m - 1h)
+    - what it is
+    - why it's cool
+    - what it is not
+    - gitignore
+    - branches!!
+      - concept
+      - creating
+      - merging
+      - handling messes
+    - solo vs team 
+      - problems that come up in teams
+  - helping install and setup (15m)
+  - exercises (2h15)
+    - PART 1: OWN REPO (1h)
+      - create on github
+      - clone
+      - create own branch
+      - add file
+      - push
+    - PART 2: OUR REPO THAT WE HAVE FILLED WITH PROBLEMS (1h)
+    - set up a repo (10m) assuming existing repo THAT WE HAVE SET UP FOR THIS
+      - go to this page
+      - find the button to fork it
+      - find the button to clone your own new
+      - click it
+      - go to the terminal
+      - paste it
+      - or go to rstudio and follow the interface
+    - commit a change and understand that that is a local thing (5m)
+    - either push the change or pull-request
+    - now make a dumb change that will break the git
+    - fix it (2h)
+    - make your own repo 
+
+## Content
+
+- objectives
+  - philosophy
+  - background knowledge
+    - github vs git
+    - etc
+  - interface
+  - command line
+    1. `clone`
+    2. `add`
+    3. `rm`
+    4. `commit`
+    5. `push`
+    6. `pull`
+    7. `request-pull`
+    8. `merge`
+    9. `status`
+    10. `clean`
+    11. `stash`
+    12. `branch`
+  - habits
+- exercises: ideally group work + actual tangible stuff to do
+  1. assign group leader
+  2. they clone
+  3. others become collaborators
+  4. they modify different files
+  5. try merge
+  6. they modify different parts of same file
+  7. merge
+  8. etc.
+- exercise on dealing with conflicts?
+  - first AVOIDANCE - how do we prevent people having conflicts in the first place?
+  - then, once we have them, how do we fix?
+    - `vi`
+- pre-existing workshops?
+  - Luisja has one that you did before but it is a bit different from what we need in that we need exercises too
+  - https://gitexercises.fracz.com/exercise/merge-conflict/ages
+  - 
+
+## Organising
+
+- who does what?
+- next steps?
+  - contact BC3 for room booking
+  - find more resources to steal from
+  - set up the repository for them to clone / **fork**
+  - add the github authenticator app thing so that it remembers who you are and you don't have to log in every time you do a push
+  - check the Mac install methods
+- how long?
+  - morning from 09h00 - 13h00
+- room booking?
+  - need to know more precisely how many people and the exact specifics so we need to progress further before we can request it
+  - not omega expensive just need to satisfy the bureaucrats
+  - the room where we did the first aid course
+- how many people are we expecting?
+  - who do we open it to? probably most likely just research line 3 since we don't know what other people really do
+  - that gives us 17 people max
+
+## 
+
+- contact group leaders first
+  - specify who we think is good and why we only want people working in R/python/whatever
+  - say that we have 15 spots
+  - luisja is contacting the group leaders
+- state that it will be in X week or 2
+  - week starting September the 8th
+  <!-- TODO: MAKE A GOOGLE FORM FOR BOTH AVAILABILITY IN THAT WEEK AS WELL AS R PROFICIENCY LEVEL AND WHETHER THEY HAVE EVER USED GIT EITHER PERSONALLY OR AS A GROUP -->
+  rodrigo is doing this yay
+- once we have numbers, ask what systems people use
+  - windows / mac / linux
+  - rstudio / rgui / vscode / positron
+
+# The future
+
+- using Quarto not Rmarkdown
+- using positron not rstudio
+- 
